@@ -1,3 +1,6 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+all;
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -133,6 +136,25 @@ img {
   max-width: 100%;
   height: 80%;
   display: block;
+}
+
+.social-icons {
+  width: full;
+
+  display: flex;
+  justify-content: first baseline;
+  align-items: start;
+  gap: 20px;
+}
+
+.social-icons i {
+  font-size: 1.7em;
+  color: #0077b5; /* LinkedIn color */
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+  color: #06446d;
 }
 
 /* Responsiveness for smaller devices */
