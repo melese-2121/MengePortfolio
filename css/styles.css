@@ -1,5 +1,11 @@
-body {
-  padding-inline: 10%;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --main-color: #ff7b00ea;
+  --title-color: #222;
+  --subtitle-color: #8d8d8d;
 }
 
 nav {
@@ -8,11 +14,14 @@ nav {
   left: 0;
   width: 100%;
   color: rgb(58, 57, 57);
-  z-index: 999;
+  z-index: 1000;
+  background: #ffffffeb;
+  box-shadow: 0 4px 8px #fff;
 }
 
 .container {
   display: flex;
+  z-index: 1;
   position: relative;
   justify-content: space-between;
   align-items: center;
@@ -60,23 +69,80 @@ ul li a {
   text-decoration: none;
 }
 ul li a:hover {
-  color: rgba(200, 3, 3, 0.945);
-  transition: 0.5s;
+  color: rgb(231, 6, 6);
+  transition: 1s;
 }
 
-/* About styling */
-#about {
-  margin-top: 100px;
+/* Hero section */
+
+.hero-section {
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10%;
+  /* background-color: #f0f0f0; */
+}
+
+.left-container {
+  flex: 1;
+}
+
+.right-container {
+  z-index: -1;
+  flex: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.6em;
+  margin-bottom: 15px;
+  color: rgb(213, 25, 25);
+}
+
+p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #3498db;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+img {
+  z-index: 0;
+  margin-inline: auto;
+  max-width: 100%;
+  height: 80%;
+  display: block;
 }
 
 /* Responsiveness for smaller devices */
 
 @media screen and (max-width: 768px) {
   body {
-    padding-inline: 5%;
     transition: 1s;
   }
-  .container {
+  .hero-section {
+    padding-top: 50px;
     margin: 10px 2%;
     transition: 1s;
   }
@@ -118,4 +184,17 @@ ul li a:hover {
 
 .bar {
   background-color: #504e4e;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.1em;
+    margin-top: -50px;
+  }
+  img {
+    margin-left: 20px;
+  }
+  .right-container {
+    display: block; /* Display for devices larger than medium (768px) */
+  }
 }
