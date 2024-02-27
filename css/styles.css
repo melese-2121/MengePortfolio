@@ -156,7 +156,7 @@ img {
 
 .social-icons i {
   font-size: 1.7em;
-  color: #0077b5; /* LinkedIn color */
+  color: #0077b5;
   transition: color 0.3s ease-in-out;
 }
 
@@ -170,7 +170,9 @@ img {
   width: 100%;
   height: 100%;
 }
-
+.animate {
+  animation: moveLeftRight 10s linear infinite;
+}
 .swiper-slide {
   font-size: 18px;
   display: flex;
@@ -200,12 +202,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.99); /* Semi-transparent black background */
+  background: rgba(255, 255, 255, 0.99);
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Smooth transition effect */
+  transition: opacity 0.3s ease;
 }
 
 .inner-overlay {
@@ -241,6 +243,129 @@ img {
   font-size: smaller;
   color: #555;
 }
+.contact-section {
+  margin-top: 200px;
+}
+.contact-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 2%;
+  transition: 1s;
+}
+
+.contact-container {
+  flex: 1;
+  margin-left: 20%;
+  background-color: #fff;
+  width: 140%;
+  height: 100%;
+}
+
+.image-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: 500px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.contact-info i {
+  margin-right: 20px;
+  font-size: 28px;
+  color: #0077b5;
+}
+.contact-info span {
+  font-size: 24px;
+  color: #504e4e;
+}
+
+/* Skills */
+.skills-over-cont {
+  margin-top: 160px;
+  padding-inline: 10%;
+}
+.skills-container {
+  margin-top: -30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  text-align: center;
+  margin-inline: 10px;
+  flex-basis: calc(25% - 20px);
+}
+
+.skill img {
+  margin-top: 50px;
+  cursor: pointer;
+  margin-inline: auto;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  transition: transform 1s ease-in-out;
+}
+.skill img:hover {
+  transform: scale(1.2) rotate(90deg);
+  transition: transform 2s ease-in-out;
+}
+.skill i {
+  margin-top: 50px;
+  cursor: pointer;
+  font-size: 100px;
+  color: #0077b5;
+  transition: transform 1s ease-in-out;
+}
+.skill i:hover {
+  transform: scale(1.2) rotate(90deg);
+  transition: transform 2s ease-in-out;
+}
+
+.skill span {
+  font-weight: bold;
+  font-size: large;
+  color: chocolate;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .skill {
+    flex-basis: calc(50% - 20px); /* Two columns for medium devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill {
+    flex-basis: calc(100% - 20px); /* One column for small devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    display: none;
+  }
+}
+
 /* Responsiveness for smaller devices */
 
 @media screen and (max-width: 768px) {
@@ -311,6 +436,6 @@ img {
     margin-left: 20px;
   }
   .right-container {
-    display: block; /* Display for devices larger than medium (768px) */
+    display: block;
   }
 }

@@ -44,3 +44,11 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+var swiper = new Swiper(".swiper-wrapper", {
+  slidesPerView: "auto", // Set the number of slides per view based on container width
+  spaceBetween: 10, // Adjust the space between slides if needed
+});
+
+// Automatically scroll to the next slide on page load
+swiper.slideNext();
