@@ -104,7 +104,14 @@ ul li a:hover {
   margin-bottom: 15px;
   color: rgb(213, 25, 25);
 }
+.main-title {
+  font-size: 2em;
+  padding-bottom: 20px;
+}
 
+.sec-cont {
+  margin-top: 70px;
+}
 p {
   font-size: 1.2em;
   color: #555;
@@ -157,6 +164,83 @@ img {
   color: #06446d;
 }
 
+/* Swiper css */
+.swiper {
+  overflow-x: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  display: flex;
+  padding-inline: 1px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.swiper-slide .work-img-cont {
+  position: relative;
+  width: 98%;
+  height: 200px;
+}
+.swiper-slide .work-img-cont img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  margin-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.99); /* Semi-transparent black background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+.inner-overlay {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-overlay .tool {
+  padding-left: 10px;
+  color: darkorange;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+.image-overlay i {
+  color: rgb(5, 170, 85);
+  padding-top: 5px;
+}
+
+.work-img-cont:hover .image-overlay {
+  opacity: 1;
+  transform: scale(1.12);
+  border: 1px solid #8d8d8d;
+  transition-duration: 1.5s;
+}
+.work-img-cont:hover img {
+  transform: scale(1.12);
+  transition: ease-in-out 1s all;
+}
+.work-img-cont p {
+  font-size: smaller;
+  color: #555;
+}
 /* Responsiveness for smaller devices */
 
 @media screen and (max-width: 768px) {
@@ -167,6 +251,9 @@ img {
     padding-top: 50px;
     margin: 10px 2%;
     transition: 1s;
+  }
+  #about {
+    margin: 10px 2%;
   }
 
   .menu-toggle {
@@ -206,6 +293,13 @@ img {
 
 .bar {
   background-color: #504e4e;
+}
+
+#about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
