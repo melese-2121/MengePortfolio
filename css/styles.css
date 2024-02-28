@@ -243,58 +243,6 @@ img {
   font-size: smaller;
   color: #555;
 }
-.contact-section {
-  margin-top: 200px;
-}
-.contact-cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 2%;
-  transition: 1s;
-}
-
-.contact-container {
-  flex: 1;
-  margin-left: 20%;
-  background-color: #fff;
-  width: 140%;
-  height: 100%;
-}
-
-.image-container {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: 500px;
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.contact-info i {
-  margin-right: 20px;
-  font-size: 28px;
-  color: #0077b5;
-}
-.contact-info span {
-  font-size: 24px;
-  color: #504e4e;
-}
 
 /* Skills */
 .skills-over-cont {
@@ -347,6 +295,95 @@ img {
   margin-top: 10px;
   text-align: center;
 }
+/* Contact */
+
+.contact-section {
+  margin-top: 150px;
+  padding-inline: 10%;
+}
+.contact-cont {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto; /* Center the container */
+
+  width: 60%; /* Set the width of the container */
+  position: relative;
+}
+
+/* Styling for the content inside the contact container */
+.contact-content {
+  padding-block: 50px;
+  margin-block: 20px;
+  margin-inline: 15%; /* Move 15% to the left and right */
+  animation: moveAnimation 2s ease-in-out infinite alternate; /* Add animation */
+  transition: transform 0.5s ease; /* Add transition for smooth change */
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+}
+
+/* Styling for tooltip */
+.tooltip {
+  padding-inline: 15px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.tooltip i {
+  color: #0077b5;
+}
+.tooltip i:hover {
+  color: darkgoldenrod;
+  transition-duration: 1s;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+
+  transform: translateX(-50%) translateY(-10px); /* Show from bottom to top smoothly */
+}
+
+/* Keyframes for the animation */
+@keyframes moveAnimation {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+/* Stop animation on hover */
+.contact-cont:hover .contact-content {
+  animation: none;
+  transform: translateX(0); /* Move back to initial position */
+}
 
 @media (max-width: 768px) {
   .skill {
@@ -376,6 +413,9 @@ img {
     padding-top: 50px;
     margin: 10px 2%;
     transition: 1s;
+  }
+  .contact-cont {
+    width: 100%;
   }
   #about {
     margin: 10px 2%;
