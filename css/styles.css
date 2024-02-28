@@ -369,6 +369,25 @@ img {
   transform: translateX(-50%) translateY(-10px); /* Show from bottom to top smoothly */
 }
 
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-inline: 15px;
+  cursor: pointer;
+}
+#scrollToTopBtn:hover {
+  background-color: #06446d;
+  padding-inline: 25px;
+  transition-duration: 1s;
+}
+
 /* Keyframes for the animation */
 @keyframes moveAnimation {
   0% {

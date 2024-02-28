@@ -283,10 +283,10 @@
         </div>
       </div>
     </section>
-
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up" style="font-size: larger"></i>
+    </button>
+    <footer></footer>
     <!-- Swiper JS -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -294,6 +294,29 @@
 
     <!-- Local js file -->
     <script src="js/script.js"></script>
+    <script>
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down, show the button; otherwise, hide it
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > window.innerHeight / 2 ||
+          document.documentElement.scrollTop > window.innerHeight / 2
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      // When the user clicks on the button, scroll to the top of the document with smooth scrolling
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/04a22e07a6.js"
       crossorigin="anonymous"
