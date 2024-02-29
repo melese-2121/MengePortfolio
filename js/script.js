@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var text = "Website Designer and Developer.";
+  var text = "ebsite Designer and Developer.";
   var index = 0;
-  var speed = 120;
+  var speed = 150;
 
   function typeWriter() {
     if (index < text.length) {

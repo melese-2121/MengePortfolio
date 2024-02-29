@@ -39,9 +39,9 @@
         </div>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -54,7 +54,8 @@
             class="highlight"
             id="typed-text"
             style="font-size: 30px; color: rgb(245, 177, 2)"
-          ></span>
+            >W</span
+          >
         </h1>
         <p>
           Welcome to my portfolio website. I am a passionate website designer
@@ -67,7 +68,7 @@
             align-items: center;
           "
         >
-          <a href="#portfolio" class="cta-button">More about me</a>
+          <a href="#about" class="cta-button">More about me</a>
           <div class="social-icons">
             <a href="https://www.linkedin.com/" target="_blank"
               ><i class="fab fa-linkedin"></i
@@ -85,8 +86,63 @@
         <img src="./images/photo.jpg" alt="Responsive Image" />
       </div>
     </section>
+    <h1
+      id="about"
+      class="main-title"
+      style="padding-inline: 10%; margin-top: 120px"
+    >
+      About Me
+    </h1>
+    <section class="about-section">
+      <!-- Image Container -->
+      <div class="about-image-container">
+        <img
+          src="images/photo-4.jpg"
+          alt="Your Image"
+          style="max-width: 100%; height: auto"
+        />
+      </div>
 
-    <section class="hero-section sec-cont">
+      <!-- About Container -->
+
+      <div class="about-container">
+        <div class="about-inner">
+          <div class="about-sub-inner">
+            <i
+              class="fas fa-briefcase"
+              style="font-size: 24px; color: rgb(245, 177, 2); margin-top: 10px"
+            ></i>
+            <h3>Experience</h3>
+            <p>
+              Worked on various design projects, creating visually appealing
+              graphics.
+            </p>
+          </div>
+          <div class="about-sub-inner">
+            <!-- Experience icon -->
+            <i
+              class="fas fa-graduation-cap"
+              style="font-size: 24px; color: green; margin-top: 10px"
+            ></i>
+            <h3>Education</h3>
+            <p>
+              Addis Ababa University - Bachelor of Science in Computer Science
+            </p>
+          </div>
+        </div>
+        <!-- Second div with a text area -->
+        <div style="text-align: center; padding-inline: 30px; color: darkgray">
+          <p>
+            Let's collaborate...💪... and turn your idea into reality! &#129321;
+          </p>
+          <a href="#contact" class="contact-button">
+            <i class="fas fa-envelope"></i> Contact Me Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="hero-section sec-cont">
       <!-- Swiper -->
       <div class="swiper mySwiper" style="padding-bottom: 60px">
         <h1 class="main-title">My projects</h1>
@@ -231,7 +287,7 @@
       </div>
     </section>
 
-    <section class="skills-over-cont">
+    <section id="skills" class="skills-over-cont">
       <h1 class="main-title">My Skills</h1>
       <div class="skills-container">
         <div class="skill">
@@ -256,7 +312,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <!-- H1 with class name main-title -->
       <h1 class="main-title">Contact Me</h1>
       <div class="contact-cont">
