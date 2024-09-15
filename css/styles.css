@@ -605,3 +605,40 @@ img {
     display: block;
   }
 }
+
+
+.professional-link {
+  text-decoration: none;
+  color: #333; /* Neutral color for the link */
+  font-weight: bold; /* To emphasize the link */
+  position: relative;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color changes */
+}
+
+.professional-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #007bff; /* Professional blue hover color */
+  transition: width 0.3s;
+  bottom: -2px;
+  left: 0;
+}
+
+.professional-link:hover::after {
+  width: 100%; /* Line appears on hover */
+}
+
+.professional-link:hover {
+  color: #007bff; /* Optional color change */
+}
+
+.work-title {
+  text-align: center;   /* Centers the title */
+  margin-top: 10px;     /* Adds space above the title */
+  margin-bottom: 20px;  /* Adds space below the title to avoid overlapping pagination */
+  font-size: 18px;      /* Adjust the font size as needed */
+}
+
